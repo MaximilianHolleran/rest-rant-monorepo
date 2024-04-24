@@ -12,6 +12,7 @@ function PlaceIndex(data) {
 			const response = await fetch(`http://localhost:5000/places`)
 			const resData = await response.json()
 			setPlaces(resData)
+			console.log(response)
 		}
 		fetchData()
 	}, [])

@@ -13,11 +13,10 @@ function LoginForm() {
         password: ''
     })
 
-    const [errorMessage, setErrorMessage] = useState(null)
-
-     
+    const [errorMessage, setErrorMessage] = useState(null) 
   
     async function handleSubmit(e) {
+        e.preventDefault()
         const response = await fetch(`http://localhost:5000/authentication/`, {
             method: 'POST',
             headers: {
@@ -36,10 +35,6 @@ function LoginForm() {
         }
     }
       
-    
-  
-
-
     return (
         <main>
             <h1>Login</h1>
